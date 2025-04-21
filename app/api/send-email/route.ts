@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
         pass: process.env.EMAIL_PASS!
       }
     })
-    const url = `http://localhost:3000/verify/${key}`
+    const url = `https://kuldeep-project.vercel.app/verify/${key}`
     await transporter.sendMail({
       from: process.env.EMAIL_USER!,
       to: email,
